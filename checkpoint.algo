@@ -1,0 +1,35 @@
+ALGORITHM checkpoint_algo
+VAR
+
+sentence : STRING ;
+n,i : INTEGER:=0 ;
+w : INTEGER:=1 ;
+v : INTEGER:=0
+
+BEGIN
+
+WHILE (sentence='' and sentence[sentence.length-1]!='.') DO
+    repeat{
+    write("give me the sentence")
+    read(sentence) }
+END_WHILE 
+
+n := sentence.length ;
+
+FOR i FROM 0 TO length.sentence-1 STEP step  DO
+
+    IF (i = '') THEN
+        w := w + 1
+    END_IF
+
+    IF (sentence[i]=== 'a' OR sentence[i]=== 'o' OR sentence[i]=== 'u' 
+        OR sentence[i]=== 'i' OR sentence[i]=== 'e' OR sentence[i]=== 'y' ) THEN
+        v := v + 1
+    END_IF
+
+END_FOR
+write (sentence)
+write ("num_char :", n)
+write ("num_words :", w)
+write ("num_vowels :", v)
+END
